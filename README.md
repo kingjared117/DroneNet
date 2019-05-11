@@ -1,7 +1,7 @@
 # DroneNet
-Planned approach for project 3b
 
-This document states the approach that our team plans to take to complete project 3b.
+The goal of this project is to simulate a drone cloud.  A net of nodes are created and they have to let everyone in the net know data about themselves.  They do this by broadcasting the data to the nearby nodes.  It is needed to let every node get a chance to speak and for each node to be listening to only one node at a time.  This means that if a node is speaking all the nearby nodes must be listening instead of transmiting.
+Below is the structure for the solution that was devolped.
 
 General Structure
 We plan to have several different data structures that all nodes will have access to,  One is a list of all nodes.  Each node struct will know its position and how many times the node has broadcasted.  It will also contain the lock for the node and the condition variable.  One lock is for the node transmiting.  The condition variable states what frequency the node is broadcasting and listening on.
